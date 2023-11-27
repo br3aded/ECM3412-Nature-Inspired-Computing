@@ -37,9 +37,12 @@ def inital_pheromone(size):
     #returns a matrix of size number of citys intiliased with random values between 0.1 and 1
     return [[random.uniform(0.1,1) for i in range(size)] for j in range(size)]
 
-def get_heuristic_matrix(distance_matrix):
+def get_heuristic_matrix(distance_matrix,q):
     #returns a matrix of values 1/d as heurstic function
     return [[(1/distance_matrix[i][j]) if i !=j else 0 for i in range(len(distance_matrix))] for j in range(len(distance_matrix))]
+
+    #alternative heuristic function
+    #return [[(q/distance_matrix[i][j]) if i !=j else 0 for i in range(len(distance_matrix))] for j in range(len(distance_matrix))]
 
 #this function calculates one ant path
 def ant_path(heuristic_matrix,pheromone_matrix):
@@ -107,20 +110,26 @@ def calculate_transition_probabilities(heuristic_matrix,pheromone_matrix,city_in
             
     return cumulative_probabilties
 
+#this function uses the cost formula to calculate the fitness of a given path
 def distance_cost(path,distance_matrix):
     cost = 0
     for j in range(len(path)-1):
+        #iterate through list to length - 1 to get the cost between for each path
         cost += distance_matrix[path[j]][path[j+1]]
+    #add the cost for path between last and first 
     cost += distance_matrix[path[-1]][path[1]]
     return cost
 
-def pheromone_update(ant_paths,pheromone_matrix,distance_matrix,q):
+#this function updates the pheromones by add
+def pheromone_update(ant_paths,pheromone_matrix,distance_matrix,q,evaporate_rate):
+    #for each cost between cities on the path add q/total cost of the path
     for path in ant_paths:
         cost = distance_cost(path,distance_matrix)
         for i in range(len(path)-1):
+            #pheromone update by fitness function
             pheromone_matrix[path[i]][path[i+1]] += q/cost
-
-def evaporate_pheromones(pheromone_matrix,evaporate_rate):
+    
+    #evaporate all pheromones by evaporate rate
     for i in range(len(pheromone_matrix)):
         for j in range(len(pheromone_matrix)):
             pheromone_matrix[i][j] *= (1-evaporate_rate)
@@ -128,7 +137,7 @@ def evaporate_pheromones(pheromone_matrix,evaporate_rate):
 def ant_colony(xml_file,ant_num,evaporate_rate,q_value,iteration_number):
     #call functions to get the distance matrix , heurstic matrix and phermone matrix
     distance_matrix = get_distance_matrix(xml_file)
-    heuristic_matrix = get_heuristic_matrix(distance_matrix)
+    heuristic_matrix = get_heuristic_matrix(distance_matrix,q_value)
     pheromone_matrix = inital_pheromone(len(distance_matrix))
     
     best_solution = [100000,0,0]
@@ -145,20 +154,19 @@ def ant_colony(xml_file,ant_num,evaporate_rate,q_value,iteration_number):
             ant_paths.append(path)
         
         #update pheromones
-        pheromone_update(ant_paths,pheromone_matrix,distance_matrix,q_value)
-
-        #evaporate pheromones
-        evaporate_pheromones(pheromone_matrix,evaporate_rate)
+        pheromone_update(ant_paths,pheromone_matrix,distance_matrix,q_value,evaporate_rate)
 
     print(best_solution)
  
 
 if __name__ == '__main__':
+    #variables that can be changed 
     file_name = "burma.xml"
-    ant_number = 10
+    ant_number = 50
     evaporate_rate = 0.3
     q_value = 1
     iteration_number = 1000
+
 
     start_time = time.time()
     ant_colony(file_name,ant_number,evaporate_rate,q_value,iteration_number)
