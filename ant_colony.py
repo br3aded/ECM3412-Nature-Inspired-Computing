@@ -1,7 +1,6 @@
 import xml.etree.ElementTree as ET
 import random
 import copy
-import time
 import numpy as np
 
 
@@ -43,6 +42,8 @@ def get_heuristic_matrix(distance_matrix,q):
 
     #alternative heuristic function
     #return [[(q/distance_matrix[i][j]) if i !=j else 0 for i in range(len(distance_matrix))] for j in range(len(distance_matrix))]
+    #return [[(1/distance_matrix[i][j]**2) if i !=j else 0 for i in range(len(distance_matrix))] for j in range(len(distance_matrix))]
+
 
 #this function calculates one ant path
 def ant_path(heuristic_matrix,pheromone_matrix):
@@ -134,15 +135,17 @@ def pheromone_update(ant_paths,pheromone_matrix,distance_matrix,q,evaporate_rate
         for j in range(len(pheromone_matrix)):
             pheromone_matrix[i][j] *= (1-evaporate_rate)
 
-def ant_colony(xml_file,ant_num,evaporate_rate,q_value,iteration_number):
+def ant_colony_optimisation(xml_file,ant_num,evaporate_rate,q_value,fitness_evaluations):
     #call functions to get the distance matrix , heurstic matrix and phermone matrix
     distance_matrix = get_distance_matrix(xml_file)
     heuristic_matrix = get_heuristic_matrix(distance_matrix,q_value)
     pheromone_matrix = inital_pheromone(len(distance_matrix))
     
+    total_evaluations = 0
+
     best_solution = [100000,0,0]
 
-    for i in range(iteration_number):
+    while total_evaluations <= fitness_evaluations:
         ant_paths = []
         #initalise and get paths for each ant
         for j in range(ant_num):
@@ -150,7 +153,8 @@ def ant_colony(xml_file,ant_num,evaporate_rate,q_value,iteration_number):
             if(distance_cost(path,distance_matrix)<best_solution[0]):
                 best_solution[0] = distance_cost(path,distance_matrix)
                 best_solution[1] = path
-                best_solution[2] = i
+                best_solution[2] = total_evaluations
+            total_evaluations += 1
             ant_paths.append(path)
         
         #update pheromones
@@ -159,18 +163,4 @@ def ant_colony(xml_file,ant_num,evaporate_rate,q_value,iteration_number):
     print(best_solution)
  
 
-if __name__ == '__main__':
-    #variables that can be changed 
-    file_name = "burma.xml"
-    ant_number = 50
-    evaporate_rate = 0.3
-    q_value = 1
-    iteration_number = 1000
-
-
-    start_time = time.time()
-    ant_colony(file_name,ant_number,evaporate_rate,q_value,iteration_number)
-    end_time = time.time()
-    print(end_time-start_time)
-    
     
