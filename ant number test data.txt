@@ -1,0 +1,109 @@
+burma.xml Results:
+Number of Ants : 10
+test 1| solution : 3738.0 | convergence : 164
+test 2| solution : 3509.0 | convergence : 186
+test 3| solution : 3486.0 | convergence : 143
+test 4| solution : 3509.0 | convergence : 166
+test 5| solution : 3598.0 | convergence : 160
+test 6| solution : 3583.0 | convergence : 211
+test 7| solution : 3451.0 | convergence : 191
+test 8| solution : 3643.0 | convergence : 135
+test 9| solution : 3537.0 | convergence : 26
+test 10| solution : 3760.0 | convergence : 213
+Overall Results | Best Solution : 3451.0 | Average Solution : 3581.4| Average Covengence :159.5
+
+Number of Ants : 25
+test 1| solution : 3486.0 | convergence : 284
+test 2| solution : 3486.0 | convergence : 353
+test 3| solution : 3509.0 | convergence : 295
+test 4| solution : 3429.0 | convergence : 37
+test 5| solution : 3474.0 | convergence : 263
+test 6| solution : 3509.0 | convergence : 302
+test 7| solution : 3486.0 | convergence : 311
+test 8| solution : 3474.0 | convergence : 379
+test 9| solution : 3486.0 | convergence : 276
+test 10| solution : 3474.0 | convergence : 202
+Overall Results | Best Solution : 3429.0 | Average Solution : 3481.3| Average Covengence :270.2
+
+Number of Ants : 50
+test 1| solution : 3451.0 | convergence : 1174
+test 2| solution : 3451.0 | convergence : 587
+test 3| solution : 3486.0 | convergence : 494
+test 4| solution : 3486.0 | convergence : 604
+test 5| solution : 3451.0 | convergence : 457
+test 6| solution : 3451.0 | convergence : 692
+test 7| solution : 3486.0 | convergence : 449
+test 8| solution : 3486.0 | convergence : 584
+test 9| solution : 3486.0 | convergence : 556
+test 10| solution : 3486.0 | convergence : 556
+Overall Results | Best Solution : 3451.0 | Average Solution : 3472.0| Average Covengence :615.3
+
+Number of Ants : 75
+test 1| solution : 3451.0 | convergence : 1123
+test 2| solution : 3486.0 | convergence : 655
+test 3| solution : 3486.0 | convergence : 841
+test 4| solution : 3441.0 | convergence : 952
+test 5| solution : 3451.0 | convergence : 515
+test 6| solution : 3451.0 | convergence : 699
+test 7| solution : 3451.0 | convergence : 1036
+test 8| solution : 3451.0 | convergence : 658
+test 9| solution : 3451.0 | convergence : 817
+test 10| solution : 3451.0 | convergence : 803
+Overall Results | Best Solution : 3441.0 | Average Solution : 3457.0| Average Covengence :809.9
+
+Number of Ants : 100
+test 1| solution : 3451.0 | convergence : 1400
+test 2| solution : 3486.0 | convergence : 745
+test 3| solution : 3451.0 | convergence : 1196
+test 4| solution : 3486.0 | convergence : 913
+test 5| solution : 3451.0 | convergence : 1068
+test 6| solution : 3451.0 | convergence : 1144
+test 7| solution : 3429.0 | convergence : 590
+test 8| solution : 3441.0 | convergence : 810
+test 9| solution : 3451.0 | convergence : 1043
+test 10| solution : 3451.0 | convergence : 1024
+Overall Results | Best Solution : 3429.0 | Average Solution : 3454.8| Average Covengence :993.3
+
+
+brazil.xml Results:
+Number of Ants : 10
+test 1| solution : 29934.0 | convergence : 273
+test 2| solution : 29377.0 | convergence : 346
+test 3| solution : 28140.0 | convergence : 265
+test 4| solution : 28439.0 | convergence : 361
+test 5| solution : 29218.0 | convergence : 242
+Overall Results | Best Solution : 28140.0 | Average Solution : 29021.6| Average Covengence :297.4
+
+Number of Ants : 25
+test 1| solution : 26997.0 | convergence : 903
+test 2| solution : 27728.0 | convergence : 457
+test 3| solution : 27651.0 | convergence : 824
+test 4| solution : 29031.0 | convergence : 594
+test 5| solution : 27666.0 | convergence : 897
+Overall Results | Best Solution : 26997.0 | Average Solution : 27814.6| Average Covengence :735.0
+
+Number of Ants : 50
+test 1| solution : 27234.0 | convergence : 1308
+test 2| solution : 26956.0 | convergence : 1377
+test 3| solution : 27513.0 | convergence : 1146
+test 4| solution : 27313.0 | convergence : 923
+test 5| solution : 27860.0 | convergence : 1142
+Overall Results | Best Solution : 26956.0 | Average Solution : 27375.2| Average Covengence :1179.2
+
+Number of Ants : 75
+test 1| solution : 26348.0 | convergence : 2000
+test 2| solution : 26574.0 | convergence : 1862
+test 3| solution : 26518.0 | convergence : 1661
+test 4| solution : 27111.0 | convergence : 1868
+test 5| solution : 26849.0 | convergence : 1780
+Overall Results | Best Solution : 26348.0 | Average Solution : 26680.0| Average Covengence :1834.2
+
+Number of Ants : 100
+test 1| solution : 26791.0 | convergence : 2848
+test 2| solution : 26313.0 | convergence : 2650
+test 3| solution : 26777.0 | convergence : 2996
+test 4| solution : 27486.0 | convergence : 2579
+test 5| solution : 28355.0 | convergence : 2493
+Overall Results | Best Solution : 26313.0 | Average Solution : 27144.4| Average Covengence :2713.2
+
+

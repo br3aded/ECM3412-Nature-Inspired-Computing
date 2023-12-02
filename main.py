@@ -3,6 +3,103 @@ from elitism_ant_colony import elitism_ant_colony_optimisation
 from min_max_ant_colony import ant_colony_optimisation_mmas
 import time
 
+def ant_number_tests():
+    data_sets = ["burma.xml" , "brazil.xml"]
+    ant_numbers = [10,25,50,75,100]
+    test_num = 0
+
+    file_path = 'ant number test data.txt'
+    file = open(file_path, 'w')
+    for data in data_sets:
+        file.write(str(data) + " Results:\n")
+        if data == 'burma.xml':
+            test_num = 10
+        else:
+            test_num = 5
+        for i in range(len(ant_numbers)):
+            file.write("Number of Ants : " + str(ant_numbers[i]) + "\n")
+            print("Number of Ants : " + str(ant_numbers[i]))
+            best_solution = [100000,0,0]
+            average_solution = 0
+            average_convergence = 0
+            for j in range(test_num):
+                solution = ant_colony_optimisation(data,ant_numbers[i],0.5,3,10000)
+                if solution[0] < best_solution[0]:
+                    best_solution = solution
+                average_solution += solution[0]
+                average_convergence += solution[2]
+                file.write("test " + str(j+1) + "| solution : " + str(solution[0]) + " | convergence : " + str(solution[2]) + "\n")
+            average_solution = average_solution / test_num
+            average_convergence = average_convergence / test_num
+            file.write("Overall Results | Best Solution : " +  str(best_solution[0]) + " | Average Solution : " + str(average_solution) + "| Average Covengence :" + str(average_convergence) + "\n")
+            file.write('\n')
+        file.write('\n')
+    file.close()
+
+def evaporation_rate_tests():
+    data_sets = ["burma.xml" , "brazil.xml"]
+    evaporation_rates = [0.9,0.7,0.5,0.3,0.1]
+    test_num = 0
+
+    file_path = 'evaporation rate test data.txt'
+    file = open(file_path, 'w')
+    for data in data_sets:
+        file.write(str(data) + " Results:\n")
+        if data == 'burma.xml':
+            test_num = 10
+        else:
+            test_num = 5
+        for i in range(len(evaporation_rates)):
+            file.write("Evaporation Rate : " + str(evaporation_rates[i]) + "\n")
+            best_solution = [100000,0,0]
+            average_solution = 0
+            average_convergence = 0
+            for j in range(test_num):
+                solution = ant_colony_optimisation(data,50,evaporation_rates[i],3,10000)
+                if solution[0] < best_solution[0]:
+                    best_solution = solution
+                average_solution += solution[0]
+                average_convergence += solution[2]
+                file.write("test " + str(j+1) + "| solution : " + str(solution[0]) + " | convergence : " + str(solution[2]) + "\n")
+            average_solution = average_solution / test_num
+            average_convergence = average_convergence / test_num
+            file.write("Overall Results | Best Solution : " +  str(best_solution[0]) + " | Average Solution : " + str(average_solution) + "| Average Covengence :" + str(average_convergence) + "\n")
+            file.write('\n')
+        file.write('\n')
+    file.close()
+
+def q_value_tests():
+    data_sets = ["burma.xml" , "brazil.xml"]
+    q_value = [1,2,3,4,5]
+    test_num = 0
+
+    file_path = 'q value test data.txt'
+    file = open(file_path, 'w')
+    for data in data_sets:
+        file.write(str(data) + " Results:\n")
+        if data == 'burma.xml':
+            test_num = 10
+        else:
+            test_num = 5
+        for i in range(len(q_value)):
+            file.write("Q Value : " + str(q_value[i]) + "\n")
+            best_solution = [100000,0,0]
+            average_solution = 0
+            average_convergence = 0
+            for j in range(test_num):
+                solution = ant_colony_optimisation(data,50,0.5,q_value[i],10000)
+                if solution[0] < best_solution[0]:
+                    best_solution = solution
+                average_solution += solution[0]
+                average_convergence += solution[2]
+                file.write("test " + str(j+1) + "| solution : " + str(solution[0]) + " | convergence : " + str(solution[2]) + "\n")
+            average_solution = average_solution / test_num
+            average_convergence = average_convergence / test_num
+            file.write("Overall Results | Best Solution : " +  str(best_solution[0]) + " | Average Solution : " + str(average_solution) + "| Average Covengence :" + str(average_convergence) + "\n")
+            file.write('\n')
+        file.write('\n')
+    file.close()
+
 if __name__ == '__main__':
     #variables that can be changed 
     file_name = "brazil.xml"
@@ -13,23 +110,17 @@ if __name__ == '__main__':
     pheromone_max = 2.0
     pheromone_min = 0.1
 
-    """
-    start_time = time.time()
-    ant_colony_optimisation(file_name,ant_number,evaporate_rate,q_value,fitness_evaluations)
-    end_time = time.time()
-    print(end_time-start_time)
-    """
-    
-    start_time = time.time()
-    elitism_ant_colony_optimisation(file_name,ant_number,evaporate_rate,q_value,fitness_evaluations)
-    end_time = time.time()
-    print(end_time-start_time)
-"""
-    start_time = time.time()
-    ant_colony_optimisation_mmas(file_name,ant_number,evaporate_rate,q_value,fitness_evaluations,pheromone_max,pheromone_min)
-    end_time = time.time()
-    print(end_time-start_time)
-    """
+    evaporation_rate_tests()
+    print("finished evaporation tests")
+    q_value_tests()
+
+   
+
+   
+    #ant_colony_optimisation(file_name,ant_number,evaporate_rate,q_value,fitness_evaluations)
+    #elitism_ant_colony_optimisation(file_name,ant_number,evaporate_rate,q_value,fitness_evaluations)
+    #ant_colony_optimisation_mmas(file_name,ant_number,evaporate_rate,q_value,fitness_evaluations,pheromone_max,pheromone_min)
+   
     #run tests for 5 values for each variable
     #ant nums - 10 , 25 , 50 , 75 , 100
     #evaporation - 0.9 , 0.7 ,0.6 , 0.5 , 0.3 
