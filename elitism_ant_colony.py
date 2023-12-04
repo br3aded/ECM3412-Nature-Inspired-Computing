@@ -27,4 +27,4 @@ def elitism_ant_colony_optimisation(xml_file,ant_num,evaporate_rate,q_value,fitn
         #update pheromones
         pheromone_update(ant_paths,pheromone_matrix,distance_matrix,q_value,evaporate_rate)
 
-    print(best_solution)
+    return best_solution

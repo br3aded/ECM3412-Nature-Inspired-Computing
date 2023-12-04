@@ -1,0 +1,109 @@
+burma.xml Results:
+Q Value : 1
+test 1| solution : 3451.0 | convergence : 675
+test 2| solution : 3486.0 | convergence : 533
+test 3| solution : 3451.0 | convergence : 547
+test 4| solution : 3486.0 | convergence : 640
+test 5| solution : 3451.0 | convergence : 898
+test 6| solution : 3486.0 | convergence : 608
+test 7| solution : 3486.0 | convergence : 716
+test 8| solution : 3509.0 | convergence : 602
+test 9| solution : 3486.0 | convergence : 603
+test 10| solution : 3429.0 | convergence : 399
+Overall Results | Best Solution : 3429.0 | Average Solution : 3472.1| Average Covengence :622.1
+
+Q Value : 2
+test 1| solution : 3486.0 | convergence : 646
+test 2| solution : 3474.0 | convergence : 639
+test 3| solution : 3474.0 | convergence : 600
+test 4| solution : 3451.0 | convergence : 781
+test 5| solution : 3451.0 | convergence : 755
+test 6| solution : 3451.0 | convergence : 874
+test 7| solution : 3486.0 | convergence : 462
+test 8| solution : 3451.0 | convergence : 586
+test 9| solution : 3451.0 | convergence : 503
+test 10| solution : 3486.0 | convergence : 717
+Overall Results | Best Solution : 3451.0 | Average Solution : 3466.1| Average Covengence :656.3
+
+Q Value : 3
+test 1| solution : 3486.0 | convergence : 621
+test 2| solution : 3509.0 | convergence : 638
+test 3| solution : 3451.0 | convergence : 588
+test 4| solution : 3451.0 | convergence : 600
+test 5| solution : 3509.0 | convergence : 486
+test 6| solution : 3451.0 | convergence : 849
+test 7| solution : 3451.0 | convergence : 793
+test 8| solution : 3441.0 | convergence : 499
+test 9| solution : 3451.0 | convergence : 697
+test 10| solution : 3474.0 | convergence : 543
+Overall Results | Best Solution : 3441.0 | Average Solution : 3467.4| Average Covengence :631.4
+
+Q Value : 4
+test 1| solution : 3486.0 | convergence : 510
+test 2| solution : 3451.0 | convergence : 443
+test 3| solution : 3486.0 | convergence : 639
+test 4| solution : 3451.0 | convergence : 437
+test 5| solution : 3451.0 | convergence : 569
+test 6| solution : 3451.0 | convergence : 879
+test 7| solution : 3451.0 | convergence : 861
+test 8| solution : 3474.0 | convergence : 409
+test 9| solution : 3486.0 | convergence : 489
+test 10| solution : 3451.0 | convergence : 565
+Overall Results | Best Solution : 3451.0 | Average Solution : 3463.8| Average Covengence :580.1
+
+Q Value : 5
+test 1| solution : 3486.0 | convergence : 566
+test 2| solution : 3451.0 | convergence : 519
+test 3| solution : 3451.0 | convergence : 530
+test 4| solution : 3509.0 | convergence : 532
+test 5| solution : 3451.0 | convergence : 911
+test 6| solution : 3406.0 | convergence : 313
+test 7| solution : 3451.0 | convergence : 675
+test 8| solution : 3473.0 | convergence : 63
+test 9| solution : 3441.0 | convergence : 492
+test 10| solution : 3486.0 | convergence : 655
+Overall Results | Best Solution : 3406.0 | Average Solution : 3460.5| Average Covengence :525.6
+
+
+brazil.xml Results:
+Q Value : 1
+test 1| solution : 27074.0 | convergence : 1882
+test 2| solution : 27554.0 | convergence : 1217
+test 3| solution : 26859.0 | convergence : 1327
+test 4| solution : 27498.0 | convergence : 1459
+test 5| solution : 26682.0 | convergence : 1766
+Overall Results | Best Solution : 26682.0 | Average Solution : 27133.4| Average Covengence :1530.2
+
+Q Value : 2
+test 1| solution : 27197.0 | convergence : 3452
+test 2| solution : 27491.0 | convergence : 1417
+test 3| solution : 26822.0 | convergence : 1215
+test 4| solution : 27841.0 | convergence : 1546
+test 5| solution : 28072.0 | convergence : 1316
+Overall Results | Best Solution : 26822.0 | Average Solution : 27484.6| Average Covengence :1789.2
+
+Q Value : 3
+test 1| solution : 27594.0 | convergence : 891
+test 2| solution : 27442.0 | convergence : 1858
+test 3| solution : 26183.0 | convergence : 1375
+test 4| solution : 26567.0 | convergence : 1359
+test 5| solution : 28076.0 | convergence : 1555
+Overall Results | Best Solution : 26183.0 | Average Solution : 27172.4| Average Covengence :1407.6
+
+Q Value : 4
+test 1| solution : 28216.0 | convergence : 976
+test 2| solution : 26728.0 | convergence : 1460
+test 3| solution : 26394.0 | convergence : 1397
+test 4| solution : 27532.0 | convergence : 2416
+test 5| solution : 28156.0 | convergence : 1144
+Overall Results | Best Solution : 26394.0 | Average Solution : 27405.2| Average Covengence :1478.6
+
+Q Value : 5
+test 1| solution : 27453.0 | convergence : 1372
+test 2| solution : 27116.0 | convergence : 1605
+test 3| solution : 27299.0 | convergence : 1608
+test 4| solution : 27287.0 | convergence : 1239
+test 5| solution : 27176.0 | convergence : 1195
+Overall Results | Best Solution : 27116.0 | Average Solution : 27266.2| Average Covengence :1403.8
+
+

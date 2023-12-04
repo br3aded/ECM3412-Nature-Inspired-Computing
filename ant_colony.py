@@ -42,7 +42,7 @@ def get_heuristic_matrix(distance_matrix,q):
 
     #alternative heuristic function
     #return [[(q/distance_matrix[i][j]) if i !=j else 0 for i in range(len(distance_matrix))] for j in range(len(distance_matrix))]
-    #return [[(1/distance_matrix[i][j]**2) if i !=j else 0 for i in range(len(distance_matrix))] for j in range(len(distance_matrix))]
+    #return [[(1/distance_matrix[i][j]**5) if i !=j else 0 for i in range(len(distance_matrix))] for j in range(len(distance_matrix))]
 
 
 #this function calculates one ant path

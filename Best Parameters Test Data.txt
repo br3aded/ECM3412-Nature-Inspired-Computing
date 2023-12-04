@@ -1,0 +1,19 @@
+burma.xml Results:
+test 1| solution : 3441.0 | convergence : 6775
+test 2| solution : 3451.0 | convergence : 3220
+test 3| solution : 3441.0 | convergence : 4724
+test 4| solution : 3441.0 | convergence : 4043
+test 5| solution : 3451.0 | convergence : 3122
+test 6| solution : 3406.0 | convergence : 2658
+test 7| solution : 3451.0 | convergence : 2914
+test 8| solution : 3451.0 | convergence : 2666
+test 9| solution : 3451.0 | convergence : 8312
+test 10| solution : 3441.0 | convergence : 4171
+Overall Results | Best Solution : 3406.0 | Average Solution : 3442.5| Average Covengence :4260.5
+brazil.xml Results:
+test 1| solution : 26953.0 | convergence : 8755
+test 2| solution : 26313.0 | convergence : 9646
+test 3| solution : 26628.0 | convergence : 9586
+test 4| solution : 27450.0 | convergence : 8990
+test 5| solution : 26841.0 | convergence : 9192
+Overall Results | Best Solution : 26313.0 | Average Solution : 26837.0| Average Covengence :9233.8

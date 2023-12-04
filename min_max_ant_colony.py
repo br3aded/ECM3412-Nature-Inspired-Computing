@@ -44,4 +44,4 @@ def ant_colony_optimisation_mmas(xml_file,ant_num,evaporate_rate,q_value,fitness
 
         #update pheromones
         pheromone_update_mmas(ant_paths,pheromone_matrix,distance_matrix,q_value,pheromone_max,pheromone_min,evaporate_rate)
-    print(best_solution)
+    return best_solution
